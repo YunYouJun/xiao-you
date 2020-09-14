@@ -1,0 +1,143 @@
+# Elpsy Congroo
+# - 1072803190
+
+master:
+  - 910426929
+
+admin:
+  # - 996955042
+  - 712727945
+  - 712727946
+
+# 消息应答
+answer:
+  - re:
+      pattern: 早呀|早上|哦哈呦|起床啦
+    reply:
+      - type: Plain
+        text: 新的一天也要加油鸭
+  # 同时包含
+  - includes:
+      - 怎么
+      - 啊
+    reply:
+      - type: Plain
+        text: 不告诉你
+  - includes:
+      - 发
+      - 色图
+    reply:
+      - type: Plain
+        text: 有色图？
+  - includes:
+      - 看
+      - 色图
+    reply:
+      - type: Plain
+        text: 色图在哪儿？
+  - re:
+      pattern: 你的主人|your master
+    reply:
+      - type: Plain
+        text: 云游大人
+  - includes:
+      - 我
+      - 应该
+    reply:
+      - type: Plain
+        text: 确实
+  - is: ？
+    reply:
+      - type: Plain
+        text: ？？？
+  - is: "?"
+    reply:
+      - type: Plain
+        text: "???"
+  - listen: master
+    includes: 在吗
+    reply:
+      - type: Plain
+        text: 主人我在
+    else:
+      - type: Plain
+        text: 爪巴
+  - includes: 主题文档
+    reply:
+      - type: Plain
+        text: https://yun.yunyoujun.cn
+  - includes: 搭建教程
+    reply:
+      - type: Plain
+        text: https://www.yunyoujun.cn/share/how-to-build-your-site/
+  - includes:
+      - 变成
+      - 了
+      - 光
+    reply:
+      - type: Plain
+        text: 我也想要变成光
+  - includes: 明明是我先来的
+    reply: 为什么会变成这样呢……
+  - includes: 不舒服
+    reply: 多喝热水
+  - includes:
+      - 你
+      - 怎么
+    reply: 你在教我做事？
+  - includes:
+      - 你
+      - 去
+    reply: 你在教我做事？
+  - is: 在？
+    reply: 有事？
+  - includes: 怎么样
+    reply: 就这？
+  - includes: 其实
+    reply: 真的吗？我不信。
+  - includes:
+      - miracles
+      - 文档
+    reply: https://github.com/BigCoke233/miracles/blob/master/docs/wiki.md
+  - includes:
+      - yaml
+      - 教程
+    reply: https://www.ruanyifeng.com/blog/2016/07/yaml.html
+  - includes:
+      - el
+      - bot
+      - github
+    reply: https://github.com/ElpsyCN/el-bot
+  - includes:
+      - el
+      - bot
+      - 地址
+    reply: https://github.com/ElpsyCN/el-bot
+  - includes:
+      - el
+      - bot
+      - 文档
+    reply: https://docs.bot.elpsy.cn
+  - includes:
+      - 主题
+      - release
+    reply: https://github.com/YunYouJun/hexo-theme-yun/releases
+  # 晚安土味情话
+  - is:
+      - 晚安
+      - 哦呀斯密
+      - 睡觉了
+      - 该睡了
+    quote: true
+    api: https://el-bot-api.vercel.app/api/wanan
+    reply: ${data[0]}
+  - includes:
+      - bing
+      - 壁纸
+    reply:
+      - type: Image
+        url: https://images.weserv.nl/?url=https://bing.ioliu.cn/v1/rand
+  - includes: 厉害
+    reply: 腻害
+  - is: 恭喜
+    reply: 恭喜

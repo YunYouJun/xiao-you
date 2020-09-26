@@ -129,7 +129,7 @@ answer:
       - 睡觉了
       - 该睡了
     quote: true
-    api: https://el-bot-api.vercel.app/api/wanan
+    api: https://el-bot-api.vercel.app/api/words/wanan
     reply: ${data[0]}
   - includes:
       - bing

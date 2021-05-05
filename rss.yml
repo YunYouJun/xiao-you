@@ -47,3 +47,19 @@ rss:
       group:
         # 云游君的死宅主题交流群
         - 389401003
+  - name: LeoStudio
+    url: https://leostudiooo.github.io/atom.xml
+    customFields:
+      item:
+        - updated
+        - summary
+    content:
+      - 标题：${item.title}
+      - 链接：${item.link}
+      - 时间：${item.updated}
+      - "---------------"
+      - ${item.summary}
+    target:
+      group:
+        # 云游君的死宅主题交流群
+        - 389401003
